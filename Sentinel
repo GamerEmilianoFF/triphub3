@@ -328,7 +328,7 @@ local Cursor = Instance.new("ImageLabel")
 
 local Hitmarker = Instance.new("ImageLabel")
 
-IAPortable.Name = "IA Portable"
+IAPortable.Name = "IAPortable"
 
 IAPortable.Parent = game:GetService('CoreGui')
 
@@ -362,7 +362,7 @@ local Cursor = Instance.new("ImageLabel")
 
 local Hitmarker = Instance.new("ImageLabel")
 
-IAPortable.Name = "IA Portable"
+IAPortable.Name = "IAPortable"
 
 IAPortable.Parent = game:GetService('CoreGui')
 
@@ -400,7 +400,7 @@ local Cursor = Instance.new("ImageLabel")
 
 local Hitmarker = Instance.new("ImageLabel")
 
-IAPortable.Name = "IA Portable"
+IAPortable.Name = "IAPortable"
 
 IAPortable.Parent = game:GetService('CoreGui')
 
@@ -440,7 +440,7 @@ local Cursor = Instance.new("ImageLabel")
 
 local Hitmarker = Instance.new("ImageLabel")
 
-IAPortable.Name = "IA Portable"
+IAPortable.Name = "IAPortable"
 
 IAPortable.Parent = game:GetService('CoreGui')
 
@@ -466,92 +466,16 @@ Cursor.Position = UDim2.new(0.5, 0, 0.5, 0)
 
 end)
 
-Section:NewLabel("coming soon!")
+Section:NewLabel("destroy cursors")
+Section:NewButton("destroy cursor custom", "cursor", function()
+game.CoreGui.IAPortable:Destroy()
+end)
 
 local Tab = Window:NewTab("Aimlock")
 
 local Section = Tab:NewSection("Aimlock")
 
 
-Section:NewButton("silent aim", "silent aim", function()
-    getgenv().Target = true
--- Configuration
-getgenv().Key = Enum.KeyCode.Q
-getgenv().Prediction = 0.12405
-getgenv().ChatMode = false
-getgenv().NotifMode = true
-    getgenv().PartMode = true
-    getgenv().AirshotFunccc = true
-    getgenv().Partz = "HumanoidRootPart"
-getgenv().AutoPrediction = false
---
-    _G.Types = {
-        Ball = Enum.PartType.Ball,
-        Block = Enum.PartType.Block, 
-        Cylinder = Enum.PartType.Cylinder
-    }
-    
-    --variables                 
-    	local Tracer = Instance.new("Part", game.Workspace)
-    Tracer.Name = "gay"	
-    Tracer.Anchored = true		
-    Tracer.CanCollide = false
-    Tracer.Transparency = 0.8
-    Tracer.Parent = game.Workspace	
-    Tracer.Shape = _G.Types.Block
-    Tracer.Size = Vector3.new(14,14,14)
-    Tracer.Color = Color3.fromRGB(255,7,255)
-    
-    --
-    local plr = game.Players.LocalPlayer
-local mouse = plr:GetMouse()
-local Runserv = game:GetService("RunService")
-
-circle = Drawing.new("Circle")
-circle.Color = Color3.fromRGB(171,0,255)
-circle.Thickness = 0
-circle.NumSides = 732
-circle.Radius = 120
-circle.Thickness = 0
-circle.Transparency = 0.7
-circle.Visible = true
-circle.Filled = false
-
-Runserv.RenderStepped:Connect(function()
-    circle.Position = Vector2.new(mouse.X,mouse.Y+35)
-end)
-    
-    	local guimain = Instance.new("Folder", game.CoreGui)
-    	local CC = game:GetService"Workspace".CurrentCamera
-    local LocalMouse = game.Players.LocalPlayer:GetMouse()
-    	local Locking = false
-    
-    	
-    --
-    if getgenv().valiansh == true then
-                        game.StarterGui:SetCore("SendNotification", {
-                   Title = "Valiant",
-                   Text = "Already Loaded!",
-                   Duration = 5
-        
-                   })
-        return
-    end
-    
-    getgenv().valiansh = true
-    
-        local UserInputService = game:GetService("UserInputService")
-
-    
-end)
-
-Section:NewButton("Aim tool for mob", "Tools Lock", function()
-
-   
-
-loadstring(game:HttpGet('https://pastebin.com/raw/HA8kAiYp'))()
-
-end)
 
 Section:NewButton("aim ware (q)", "Aimbot", function()
 
